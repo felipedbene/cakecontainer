@@ -21,7 +21,7 @@ ENV PATH="${PATH}:/var/www/html/app/Vendor/bin"
 COPY site.conf /etc/apache2/sites-available/000-default.conf
 
 # Copy the source code into /var/www/html/ inside the image
-COPY cake/cakephp .
+COPY . .
 
 # Set default working directory
 WORKDIR ./app
