@@ -1,9 +1,10 @@
+#JA nao uso essa merda
 version: 0.0
 Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:us-east-1:062241367565:task-definition/cake-task:IMAGE"
+        TaskDefinition: "arn:aws:ecs:us-east-1:062241367565:task-definition/cake-task"
         LoadBalancerInfo:
           ContainerName: "cakecontainer"
           ContainerPort: 80
