@@ -12,8 +12,8 @@ phases:
     commands:
       # Discover and run unit tests in the 'tests' directory
       - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
-      - REPOSITORY_URI=062241367565.dkr.ecr.us-east-1.amazonaws.com/cakephp
-      - CONTAINER_NAME=cakephp
+      - REPOSITORY_URI=062241367565.dkr.ecr.us-east-1.amazonaws.com/cakephpbackend
+      - CONTAINER_NAME=cakecontainer
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
   build:
