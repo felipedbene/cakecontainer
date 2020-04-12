@@ -1,0 +1,26 @@
+{
+    "cluster": "CakeRolling",
+    "serviceName": "cake-service",
+    "taskDefinition": "cake-task",
+    "loadBalancers": [
+        {
+            "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:062241367565:targetgroup/TargetContainers/d05b3d32f0965bd2",
+            "containerName": "cakecontainer",
+            "containerPort": 80
+        }
+    ],
+    "launchType": "FARGATE",
+    "schedulingStrategy": "REPLICA",
+    "deploymentController": {
+        "type": "EXTERNAL"
+    },
+    "platformVersion": "LATEST",
+    "networkConfiguration": {
+       "awsvpcConfiguration": {
+          "assignPublicIp": "DISABLED",
+          "securityGroups": [ "sg-0216547674efc73c4" ],
+          "subnets": [ "subnet-000595ed22dc6d669", "subnet-031b5b6d489112539" ]
+       }
+    },
+    "desiredCount": 1
+}
