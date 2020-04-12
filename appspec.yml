@@ -3,7 +3,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:us-east-1:062241367565:task-definition/CakeContainer:5"
+        TaskDefinition: "arn:aws:ecs:us-east-1:062241367565:task-definition/cake-task:2"
         LoadBalancerInfo:
-          ContainerName: "cakephp"
+          ContainerName: "cakecontainer"
           ContainerPort: 80

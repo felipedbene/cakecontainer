@@ -1,0 +1,24 @@
+aws ecs create-cluster \
+     --cluster-name cake-bluegreen-cluster \
+     --region us-east-1
+
+{    "cluster": {
+        "clusterArn": "arn:aws:ecs:us-east-1:062241367565:cluster/cake-bluegreen-cluster",
+        "clusterName": "cake-bluegreen-cluster",
+        "status": "ACTIVE",
+        "registeredContainerInstancesCount": 0,
+        "runningTasksCount": 0,
+        "pendingTasksCount": 0,
+        "activeServicesCount": 0,
+        "statistics": [],
+        "tags": [],
+        "settings": [
+            {
+                "name": "containerInsights",
+                "value": "disabled"
+            }
+        ],
+        "capacityProviders": [],
+        "defaultCapacityProviderStrategy": []
+    }
+}
