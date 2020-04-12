@@ -24,7 +24,7 @@ phases:
   post_build:
     commands:
       # Post Build
-      #- docker push $REPOSITORY_URI:latest
+      - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Write the image definitions file for ECS
       - printf '[{"name":"%s","imageUri":"%s"}]' $CONTAINER_NAME $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
