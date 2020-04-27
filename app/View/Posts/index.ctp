@@ -1,7 +1,7 @@
 <!-- File: /app/View/Posts/index.ctp -->
 
 <h1 style="background-color: black;
-  color: white;">Blog posts VERSION Vieja otra vez</h1>
+  color: white;">Blog posts VERSION una vez mas</h1>
 <p><?php echo $this->Html->link('Add Post', array('action' => 'add')); ?></p>
 <table>
     <tr>
