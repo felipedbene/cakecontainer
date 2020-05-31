@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "cake-deployment"
+spec:
+  selector:
+    matchLabels:
+      app: "cake"
+  replicas: 10
+  template:
+    metadata:
+      labels:
+        app: "cake"
+    spec:
+      containers:
+      - image: fdebene/cakephp
+        imagePullPolicy: Always
+        name: "cake"
+        ports:
+        - containerPort: 80
